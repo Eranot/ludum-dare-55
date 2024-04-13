@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Creature" load_steps=3 format=3 uid="uid://b54klhue3xt0k"]
+
+[ext_resource type="Texture2D" uid="uid://irpub1r72gmr" path="res://assets/sprites/ui/creature/basic_soldier.png" id="1_a37qv"]
+[ext_resource type="Script" path="res://resources/script/creature.gd" id="1_qosh3"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_qosh3")
+design = "E E"
+icon = ExtResource("1_a37qv")
+game_object = "res://scenes/game_object/creature/creature.tscn"
+speed = 60
+attack = 1
+hp = 3
+attack_cooldown = 1.0

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3coe6cml4ycv"]
+
+[ext_resource type="Script" path="res://scenes/game_object/creature_spawner/creature_spawner.gd" id="1_eo2w6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kvej"]
+radius = 16.1245
+
+[node name="CreatureSpawner" type="Node2D"]
+position = Vector2(332, 425)
+script = ExtResource("1_eo2w6")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4kvej")

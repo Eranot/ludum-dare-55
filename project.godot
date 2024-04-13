@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="StarterKit"
-run/main_scene="res://scenes/menu/splash_screen/splash_screen.tscn"
+config/name="Ludum Dare 55"
+run/main_scene="res://scenes/level/level_01/level_01.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 MusicPlayer="*res://scenes/global/music_player/music_player.tscn"
 AlertModalGlobal="*res://scenes/global/alert_modal/alert_modal_global.gd"
+GameEvent="*res://scenes/global/game_event/game_event.gd"
 
 [display]
 
