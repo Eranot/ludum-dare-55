@@ -16,7 +16,7 @@ func on_start_attack():
 	var enemies = explosion_area.get_overlapping_bodies()
 	
 	for enemy in enemies:
-		enemy.damage(2)
+		enemy.damage(5)
 	
 	explosion_particles.emitting = true
 	self.animated_sprite_2d.visible = false

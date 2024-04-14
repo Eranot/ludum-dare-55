@@ -11,13 +11,19 @@ func _ready():
 	
 	if is_player:
 		area_2d.collision_mask = 0x0001
+	else:
+		area_2d.collision_mask = 0x0010
 
 
-func spawn(creature: Creature):
+func spawn(creature: Creature) -> bool:
+	if area_2d.has_overlapping_areas():
+		return false
+	
 	var c = load(creature.game_object).instantiate()
 	c.is_player = is_player
 	c.creature = creature
 	add_child(c)
+	return true
 	
 
 func on_body_entered(_body):

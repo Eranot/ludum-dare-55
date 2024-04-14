@@ -17,9 +17,9 @@ func _init(_creature_spawner: CreatureSpawner):
 
 func play(credits: int) -> int:
 	if credits > next_creature.ai_credits:
-		creature_spawner.spawn(next_creature)
-		choose_next_creature()
-		return credits - next_creature.ai_credits
+		if creature_spawner.spawn(next_creature):
+			choose_next_creature()
+			return credits - next_creature.ai_credits
 	return credits
 
 func choose_next_creature():
