@@ -6,7 +6,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("2_c3wox")
-design = "B R B"
+design = "R G B"
 icon = ExtResource("1_qw417")
 game_object = "res://scenes/game_object/creature/trojan/trojan.tscn"
 speed = 6

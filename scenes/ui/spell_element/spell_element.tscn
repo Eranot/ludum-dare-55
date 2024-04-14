@@ -1,12 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://6jq03hy53fdl"]
 
 [ext_resource type="Script" path="res://scenes/ui/spell_element/spell_element.gd" id="1_1pisc"]
+[ext_resource type="Texture2D" uid="uid://dheh1np77ujty" path="res://assets/sprites/ui/element/red.png" id="2_ik75c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mt6jx"]
 resource_local_to_scene = true
 bg_color = Color(0.6, 1, 0.6, 1)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uctn1"]
 
 [node name="SpellElement" type="PanelContainer"]
 custom_minimum_size = Vector2(84, 84)
@@ -18,4 +17,4 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
-texture = SubResource("CompressedTexture2D_uctn1")
+texture = ExtResource("2_ik75c")

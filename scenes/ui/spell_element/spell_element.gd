@@ -45,7 +45,9 @@ func update_icon():
 
 func select():
 	get("theme_override_styles/panel").set("bg_color", "#99ff99")
+	texture_rect.modulate = "#6d6d6d"
 
 
 func deselect():
 	get("theme_override_styles/panel").set("bg_color", "#999999")
+	texture_rect.modulate = "#ffffff"
