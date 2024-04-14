@@ -266,8 +266,8 @@ animations = [{
 radius = 11.0
 height = 38.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7p5ka"]
-radius = 32.0244
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbeog"]
+size = Vector2(75.75, 31)
 
 [node name="ZeroDay" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite_2d", "range_area_2d", "attack_timer", "hp_bar")]
 scale = Vector2(2, 2)
@@ -295,8 +295,8 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea2D"]
-position = Vector2(-2, -16.25)
-shape = SubResource("CircleShape2D_7p5ka")
+position = Vector2(0, -15.5)
+shape = SubResource("RectangleShape2D_lbeog")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

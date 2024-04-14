@@ -6,6 +6,7 @@ extends StaticBody2D
 @export var max_hp: float = 20
 @export var hp: int = 20
 @export var is_player: bool = true
+@export var center: Node2D
 
 func _ready():
 	if is_player:

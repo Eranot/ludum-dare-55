@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://scenes/ui/spell_grid/spell_grid.gd" id="1_kvyqq"]
 [ext_resource type="Resource" uid="uid://c654u1704cbix" path="res://resources/creatures/virus.tres" id="2_aqsn2"]
-[ext_resource type="Resource" uid="uid://nvm6ro7ltnl" path="res://resources/creatures/zero_day.tres" id="3_5dg22"]
+[ext_resource type="Resource" uid="uid://dplw1v3gtvme3" path="res://resources/creatures/spammer.tres" id="3_limjv"]
 [ext_resource type="Resource" uid="uid://beibjwgt63trb" path="res://resources/creatures/trojan.tres" id="4_ulttx"]
 
 [node name="SpellGrid" type="Panel"]
 offset_right = 336.0
 offset_bottom = 336.0
 script = ExtResource("1_kvyqq")
-creatures = Array[Resource("res://resources/script/creature.gd")]([ExtResource("2_aqsn2"), ExtResource("3_5dg22"), ExtResource("4_ulttx")])
+creatures = Array[Resource("res://resources/script/creature.gd")]([ExtResource("3_limjv"), ExtResource("2_aqsn2"), ExtResource("4_ulttx")])
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2

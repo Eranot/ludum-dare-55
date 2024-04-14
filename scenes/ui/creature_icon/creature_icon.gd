@@ -1,6 +1,6 @@
 extends PanelContainer
 
-@onready var texture_rect = $MarginContainer/TextureRect
+@onready var texture_rect = $TextureRect
 @export var creature: Creature
 @export var x: int
 @export var y: int
@@ -36,6 +36,11 @@ func set_creature(c: Creature, _x: int, _y: int):
 func update_icon():
 	texture_rect.texture = creature.icon
 	texture_rect.self_modulate = "#ffffff" if enabled else "#565656"
+	
+	update_minimum_size()
+	force_update_transform()
+	texture_rect.update_minimum_size()
+	texture_rect.force_update_transform()
 
 
 func summon():

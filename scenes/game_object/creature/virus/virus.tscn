@@ -268,7 +268,7 @@ radius = 8.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_7p5ka"]
 radius = 23.5651
 
-[node name="Virus" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite_2d", "range_area_2d", "attack_timer", "hp_bar")]
+[node name="Virus" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite_2d", "range_area_2d", "attack_timer", "hp_bar", "center")]
 scale = Vector2(2, 2)
 script = ExtResource("1_p81dv")
 animated_sprite_2d = NodePath("AnimatedSprite2D")
@@ -276,6 +276,7 @@ creature = ExtResource("2_3a2b3")
 range_area_2d = NodePath("RangeArea2D")
 attack_timer = NodePath("Timer")
 hp_bar = NodePath("ProgressBar")
+center = NodePath("Center")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -17)
@@ -306,3 +307,6 @@ offset_bottom = -39.0
 max_value = 1.0
 value = 1.0
 show_percentage = false
+
+[node name="Center" type="Node2D" parent="."]
+position = Vector2(0, -13)

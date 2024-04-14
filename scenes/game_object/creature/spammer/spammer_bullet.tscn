@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvp7fjysn5xl0"]
+
+[ext_resource type="Script" path="res://scenes/game_object/creature/spammer/spammer_bullet.gd" id="1_o1e5m"]
+[ext_resource type="Texture2D" uid="uid://dsl1qq0ct7iam" path="res://assets/sprites/troops/Spam-Sheet.png" id="1_o3oue"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laydi"]
+atlas = ExtResource("1_o3oue")
+region = Rect2(0, 0, 20, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sblh3"]
+atlas = ExtResource("1_o3oue")
+region = Rect2(20, 0, 20, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xuie"]
+atlas = ExtResource("1_o3oue")
+region = Rect2(40, 0, 20, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssxvj"]
+atlas = ExtResource("1_o3oue")
+region = Rect2(60, 0, 20, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ufdk"]
+atlas = ExtResource("1_o3oue")
+region = Rect2(80, 0, 20, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iot82"]
+atlas = ExtResource("1_o3oue")
+region = Rect2(100, 0, 20, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6wytw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_laydi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sblh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xuie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssxvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ufdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iot82")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="SpammerBullet" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_6wytw")
+autoplay = "default"
+frame_progress = 0.543596
+script = ExtResource("1_o1e5m")
