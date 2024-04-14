@@ -1,48 +1,59 @@
-[gd_scene load_steps=6 format=3 uid="uid://ug8y83augb2w"]
+[gd_scene load_steps=7 format=3 uid="uid://ug8y83augb2w"]
 
 [ext_resource type="PackedScene" uid="uid://bcwaonilgh7gl" path="res://scenes/level/base_level_ui.tscn" id="1_3avbr"]
 [ext_resource type="Script" path="res://scenes/level/level_01/level_01.gd" id="1_gq153"]
 [ext_resource type="PackedScene" uid="uid://c1la5teaqclyv" path="res://scenes/ui/spell_grid/spell_grid.tscn" id="1_rl3lk"]
 [ext_resource type="PackedScene" uid="uid://b3coe6cml4ycv" path="res://scenes/game_object/creature_spawner/creature_spawner.tscn" id="4_ly5ex"]
 [ext_resource type="PackedScene" uid="uid://cqwdgt0g4m3xo" path="res://scenes/game_object/base/base.tscn" id="5_iuv7b"]
+[ext_resource type="PackedScene" uid="uid://ntnaj2erbkqt" path="res://scenes/game_object/background/background.tscn" id="6_0frht"]
 
 [node name="Level01" type="Node2D"]
 script = ExtResource("1_gq153")
 
-[node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
+[node name="UI2" type="CanvasLayer" parent="."]
 
-[node name="SpellGrid" parent="UI" instance=ExtResource("1_rl3lk")]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 42.0
-offset_top = 275.0
-offset_right = 242.0
-offset_bottom = 475.0
-grow_vertical = 2
+[node name="MarginContainer" type="MarginContainer" parent="UI2"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_right = 48.0
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PanelContainer" type="Control" parent="UI2/MarginContainer"]
+custom_minimum_size = Vector2(336, 336)
+layout_mode = 2
+
+[node name="SpellGrid" parent="UI2/MarginContainer/PanelContainer" instance=ExtResource("1_rl3lk")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(336, 336)
+layout_mode = 2
 
 [node name="BaseLevelUI" parent="." instance=ExtResource("1_3avbr")]
 
 [node name="CreatureSpawnerPlayer" parent="." instance=ExtResource("4_ly5ex")]
 unique_name_in_owner = true
-position = Vector2(41, 252)
+position = Vector2(41, 317)
 
 [node name="CreatureSpawnerEnemy" parent="." instance=ExtResource("4_ly5ex")]
 unique_name_in_owner = true
-position = Vector2(923, 252)
+position = Vector2(1236, 317)
 is_player = false
 
 [node name="AiPlayTimer" type="Timer" parent="."]
 
 [node name="BasePlayer" parent="." instance=ExtResource("5_iuv7b")]
-position = Vector2(115, 252)
+position = Vector2(115, 317)
 
 [node name="BaseEnemy" parent="." instance=ExtResource("5_iuv7b")]
-position = Vector2(848, 252)
+position = Vector2(1161, 317)
 is_player = false
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("6_0frht")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)

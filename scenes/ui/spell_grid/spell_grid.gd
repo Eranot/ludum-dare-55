@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Panel
 
 const SPELL_ELEMENT = preload("res://scenes/ui/spell_element/spell_element.tscn")
 const CREATURE_ICON = preload("res://scenes/ui/creature_icon/creature_icon.tscn")
@@ -59,6 +59,7 @@ func check_for_creatures():
 				if check_creature(x, y, creature):
 					create_creature(x, y, creature)
 
+
 func check_creature(x: int, y: int, creature: Creature):
 	var design = creature.get_design()
 	for i in range(design.size()):
@@ -86,8 +87,8 @@ func create_creature(x: int, y: int, creature: Creature):
 	
 	var element = get_element(x, y)
 	var c = CREATURE_ICON.instantiate()
+	self.add_child(c)
 	c.global_position = element.global_position
-	self.add_sibling(c)
 	c.set_creature(creature, x, y)
 	
 

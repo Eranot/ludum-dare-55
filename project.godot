@@ -23,9 +23,8 @@ GameEvent="*res://scenes/global/game_event/game_event.gd"
 
 [display]
 
-window/size/viewport_width=960
-window/size/viewport_height=540
-window/size/resizable=false
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
@@ -43,3 +42,4 @@ enabled=PackedStringArray()
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true

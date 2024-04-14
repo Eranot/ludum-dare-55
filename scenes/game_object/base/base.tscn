@@ -12,6 +12,8 @@ size = Vector2(100, 156)
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_5m7hy")
+max_hp = 100.0
+hp = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -75)

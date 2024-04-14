@@ -36,11 +36,11 @@ func update_element():
 func update_icon():
 	match(element):
 		Enums.Element.RED:
-			texture_rect.texture = preload("res://assets/sprites/ui/element/fire.png")
+			texture_rect.texture = preload("res://assets/sprites/ui/element/red.png")
 		Enums.Element.GREEN:
-			texture_rect.texture = preload("res://assets/sprites/ui/element/earth.png")
+			texture_rect.texture = preload("res://assets/sprites/ui/element/green.png")
 		Enums.Element.BLUE:
-			texture_rect.texture = preload("res://assets/sprites/ui/element/water.png")
+			texture_rect.texture = preload("res://assets/sprites/ui/element/blue.png")
 
 
 func select():

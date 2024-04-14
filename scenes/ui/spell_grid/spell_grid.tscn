@@ -1,18 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1la5teaqclyv"]
+[gd_scene load_steps=5 format=3 uid="uid://c1la5teaqclyv"]
 
 [ext_resource type="Script" path="res://scenes/ui/spell_grid/spell_grid.gd" id="1_kvyqq"]
 [ext_resource type="Resource" uid="uid://c654u1704cbix" path="res://resources/creatures/virus.tres" id="2_aqsn2"]
 [ext_resource type="Resource" uid="uid://nvm6ro7ltnl" path="res://resources/creatures/zero_day.tres" id="3_5dg22"]
+[ext_resource type="Resource" uid="uid://beibjwgt63trb" path="res://resources/creatures/trojan.tres" id="4_ulttx"]
 
-[node name="SpellGrid" type="PanelContainer"]
-custom_minimum_size = Vector2(200, 200)
-offset_right = 245.0
-offset_bottom = 255.0
+[node name="SpellGrid" type="Panel"]
+offset_right = 336.0
+offset_bottom = 336.0
 script = ExtResource("1_kvyqq")
-creatures = Array[Resource("res://resources/script/creature.gd")]([ExtResource("2_aqsn2"), ExtResource("3_5dg22")])
+creatures = Array[Resource("res://resources/script/creature.gd")]([ExtResource("2_aqsn2"), ExtResource("3_5dg22"), ExtResource("4_ulttx")])
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
+offset_right = 336.0
+offset_bottom = 336.0
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
@@ -20,3 +22,5 @@ theme_override_constants/margin_bottom = 4
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0

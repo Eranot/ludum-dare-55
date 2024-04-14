@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var creature_spawner_player = %CreatureSpawnerPlayer
 @onready var creature_spawner_enemy = %CreatureSpawnerEnemy
-@onready var spell_grid = $UI/SpellGrid
+@onready var spell_grid = %SpellGrid
 @onready var ai_play_timer = $AiPlayTimer
 
 @export var ai_timeout: float = 1
