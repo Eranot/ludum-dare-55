@@ -20,7 +20,7 @@ func spawn(creature: Creature):
 	add_child(c)
 	
 
-func on_body_entered(body):
+func on_body_entered(_body):
 	if not is_player:
 		return
 	

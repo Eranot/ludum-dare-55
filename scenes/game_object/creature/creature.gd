@@ -27,7 +27,7 @@ func _ready():
 	hp = creature.hp
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = 1 if is_player else -1
 	
 	if current_target:
