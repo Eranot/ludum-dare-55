@@ -74,7 +74,7 @@ func start_attacking_first_enemy():
 
 
 func attack():
-	if current_target:
+	if current_target and is_instance_valid(current_target):
 		var enemies = range_area_2d.get_overlapping_bodies()
 		if not current_target in enemies:
 			current_target = null

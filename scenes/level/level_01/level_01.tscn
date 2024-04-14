@@ -28,10 +28,20 @@ theme_override_constants/margin_bottom = 20
 custom_minimum_size = Vector2(336, 336)
 layout_mode = 2
 
-[node name="SpellGrid" parent="UI2/MarginContainer/PanelContainer" instance=ExtResource("1_rl3lk")]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI2/MarginContainer/PanelContainer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SpellGrid" parent="UI2/MarginContainer/PanelContainer/HBoxContainer" instance=ExtResource("1_rl3lk")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(336, 336)
 layout_mode = 2
+
+[node name="ResetGridButton" type="Button" parent="UI2/MarginContainer/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "reset grid"
 
 [node name="BaseLevelUI" parent="." instance=ExtResource("1_3avbr")]
 
@@ -45,6 +55,10 @@ position = Vector2(1236, 317)
 is_player = false
 
 [node name="AiPlayTimer" type="Timer" parent="."]
+
+[node name="ResetGridTimer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
 
 [node name="BasePlayer" parent="." instance=ExtResource("5_iuv7b")]
 position = Vector2(115, 317)

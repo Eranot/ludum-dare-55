@@ -11,8 +11,9 @@ const CREATURE_ICON = preload("res://scenes/ui/creature_icon/creature_icon.tscn"
 
 var element_selected = null
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
+	GameEvent.reset_grid.connect(on_reset_grid)
 	grid_container.columns = self.columns
 	
 	for i in range(columns * lines):
@@ -52,12 +53,17 @@ func refill_grid(x: int, y: int, width: int, height: int):
 	
 	check_for_creatures()
 
+
 func check_for_creatures():
 	for creature in creatures:
 		for y in lines:
 			for x in columns:
 				if check_creature(x, y, creature):
 					create_creature(x, y, creature)
+
+
+func on_reset_grid():
+	refill_grid(0, 0, columns, lines)
 
 
 func check_creature(x: int, y: int, creature: Creature):
@@ -82,8 +88,8 @@ func create_creature(x: int, y: int, creature: Creature):
 	var design = creature.get_design()
 	for i in range(design.size()):
 		for j in design[i].size():
-			var element = get_element(x + j, y + i)
-			element.is_used = true
+			var e = get_element(x + j, y + i)
+			e.is_used = true
 	
 	var element = get_element(x, y)
 	var c = CREATURE_ICON.instantiate()

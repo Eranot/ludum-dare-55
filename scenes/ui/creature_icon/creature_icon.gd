@@ -10,6 +10,7 @@ func _ready():
 	gui_input.connect(on_gui_input)
 	enabled = GameEvent.is_spawn_enabled
 	GameEvent.spawn_enabled.connect(on_spawn_enabled)
+	GameEvent.reset_grid.connect(on_reset_grid)
 
 
 func on_gui_input(event: InputEvent):
@@ -24,6 +25,10 @@ func on_gui_input(event: InputEvent):
 func on_spawn_enabled(_enabled: bool):
 	enabled = _enabled
 	update_icon()
+
+
+func on_reset_grid():
+	queue_free()
 
 
 func set_creature(c: Creature, _x: int, _y: int):

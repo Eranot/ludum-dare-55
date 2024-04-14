@@ -113,6 +113,7 @@ size = Vector2(31, 27.5)
 size = Vector2(55.5, 27.5)
 
 [node name="Trojan" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite_2d", "range_area_2d", "attack_timer", "hp_bar", "center")]
+z_index = 1
 scale = Vector2(2, 2)
 script = ExtResource("1_av667")
 animated_sprite_2d = NodePath("AnimatedSprite2D")
