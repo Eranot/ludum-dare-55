@@ -149,8 +149,6 @@ scale = Vector2(2, 2)
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_5m7hy")
-max_hp = 100.0
-hp = 100
 center = NodePath("Center")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

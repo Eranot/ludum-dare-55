@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://ea6qxao31f5e"]
+[gd_scene load_steps=31 format=3 uid="uid://ea6qxao31f5e"]
 
 [ext_resource type="Script" path="res://scenes/game_object/creature/creature.gd" id="1_av667"]
 [ext_resource type="Resource" uid="uid://c654u1704cbix" path="res://resources/creatures/virus.tres" id="2_wmrv1"]
 [ext_resource type="Texture2D" uid="uid://b3nxf00mqxac3" path="res://assets/sprites/troops/TrojanHorse-Sheet.png" id="3_tdrxs"]
+[ext_resource type="Texture2D" uid="uid://dbii35vhficg2" path="res://assets/sprites/troops/TrojanHorseEnemy-Sheet.png" id="4_esu2h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ycklo"]
 atlas = ExtResource("3_tdrxs")
@@ -18,6 +19,22 @@ region = Rect2(64, 0, 32, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fd6ys"]
 atlas = ExtResource("3_tdrxs")
+region = Rect2(96, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8ldi"]
+atlas = ExtResource("4_esu2h")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t8oe"]
+atlas = ExtResource("4_esu2h")
+region = Rect2(32, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kncue"]
+atlas = ExtResource("4_esu2h")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7jl6"]
+atlas = ExtResource("4_esu2h")
 region = Rect2(96, 0, 32, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kixo3"]
@@ -36,6 +53,22 @@ region = Rect2(64, 0, 32, 36)
 atlas = ExtResource("3_tdrxs")
 region = Rect2(96, 0, 32, 36)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_k76pf"]
+atlas = ExtResource("4_esu2h")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7u18p"]
+atlas = ExtResource("4_esu2h")
+region = Rect2(32, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hli75"]
+atlas = ExtResource("4_esu2h")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlonk"]
+atlas = ExtResource("4_esu2h")
+region = Rect2(96, 0, 32, 36)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_nuer0"]
 atlas = ExtResource("3_tdrxs")
 region = Rect2(0, 0, 32, 36)
@@ -50,6 +83,18 @@ region = Rect2(64, 0, 32, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0l2qp"]
 atlas = ExtResource("3_tdrxs")
+region = Rect2(96, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5bwj"]
+atlas = ExtResource("4_esu2h")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb550"]
+atlas = ExtResource("4_esu2h")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffjfu"]
+atlas = ExtResource("4_esu2h")
 region = Rect2(96, 0, 32, 36)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ttlbk"]
@@ -73,6 +118,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_k8ldi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t8oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kncue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7jl6")
+}],
+"loop": false,
+"name": &"attack_enemy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_kixo3")
 }, {
 "duration": 1.0,
@@ -90,6 +152,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_k76pf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7u18p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hli75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlonk")
+}],
+"loop": true,
+"name": &"idle_enemy",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_nuer0")
 }, {
 "duration": 1.0,
@@ -103,6 +182,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5bwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb550")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffjfu")
+}],
+"loop": true,
+"name": &"walk_enemy",
 "speed": 6.0
 }]
 
