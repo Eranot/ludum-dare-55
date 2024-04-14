@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Creature" load_steps=3 format=3 uid="uid://c654u1704cbix"]
 
-[ext_resource type="Texture2D" uid="uid://dta00823gl03j" path="res://assets/sprites/ui/creature/virus.png" id="1_v6a32"]
+[ext_resource type="Texture2D" uid="uid://cqdiivcd4e8uf" path="res://assets/sprites/ui/element/virus_element.png" id="1_1v4tp"]
 [ext_resource type="Script" path="res://resources/script/creature.gd" id="2_vpwca"]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource("2_vpwca")
 design = "G G"
-icon = ExtResource("1_v6a32")
+icon = ExtResource("1_1v4tp")
 game_object = "res://scenes/game_object/creature/virus/virus.tscn"
 speed = 5
 attack = 1

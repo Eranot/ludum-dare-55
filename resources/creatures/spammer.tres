@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Creature" load_steps=3 format=3 uid="uid://dplw1v3gtvme3"]
+
+[ext_resource type="Texture2D" uid="uid://btr57hvme0tds" path="res://assets/sprites/ui/element/spammer_element.png" id="1_kc7j0"]
+[ext_resource type="Script" path="res://resources/script/creature.gd" id="2_hvsfp"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_hvsfp")
+design = "R
+R
+G"
+icon = ExtResource("1_kc7j0")
+game_object = "res://scenes/game_object/creature/spammer/spammer.tscn"
+speed = 10
+attack = 1
+hp = 1
+attack_cooldown = 0.5
+ai_credits = 10

@@ -8,12 +8,13 @@ size = Vector2(100, 150)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dshdv"]
 size = Vector2(100, 156)
 
-[node name="Base" type="StaticBody2D"]
+[node name="Base" type="StaticBody2D" node_paths=PackedStringArray("center")]
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_5m7hy")
 max_hp = 100.0
 hp = 100
+center = NodePath("Center")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -75)
@@ -31,3 +32,6 @@ offset_bottom = -164.0
 max_value = 1.0
 value = 1.0
 show_percentage = false
+
+[node name="Center" type="Node2D" parent="."]
+position = Vector2(0, -79)

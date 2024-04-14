@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var range_area_2d: Area2D
 @export var attack_timer: Timer
 @export var hp_bar: ProgressBar
+@export var center: Node2D
 
 var current_target
 
@@ -28,6 +29,10 @@ func _ready():
 
 func _physics_process(delta):
 	var direction = 1 if is_player else -1
+	
+	if current_target:
+		direction = 0
+	
 	if direction:
 		velocity.x = direction * creature.speed * 8
 	else:
@@ -69,17 +74,28 @@ func start_attacking_first_enemy():
 
 
 func attack():
+	if current_target:
+		var enemies = range_area_2d.get_overlapping_bodies()
+		if not current_target in enemies:
+			current_target = null
+			start_attacking_first_enemy()
+			return
+	
 	if not current_target or not is_instance_valid(current_target):
 		current_target = null
 		start_attacking_first_enemy()
 		return
 	
+	on_start_attack()
 	animated_sprite_2d.play("attack")
 	await animated_sprite_2d.animation_finished
-	if is_instance_valid(current_target) and await current_target.damage(creature.attack):
+	if is_instance_valid(current_target) and await current_target.damage(get_attack()):
 		current_target = null
 	attack_timer.start(creature.attack_cooldown)
-	
+
+
+func on_start_attack():
+	pass
 
 func damage(value: int):
 	hp -= value
@@ -89,6 +105,10 @@ func damage(value: int):
 		queue_free()
 		return true
 	return false
+
+
+func get_attack():
+	return self.creature.attack
 
 
 func update_hp_bar():
