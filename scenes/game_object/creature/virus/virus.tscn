@@ -1,7 +1,7 @@
-[gd_scene load_steps=51 format=3 uid="uid://0itysmtxx4qo"]
+[gd_scene load_steps=43 format=3 uid="uid://0itysmtxx4qo"]
 
 [ext_resource type="Script" path="res://scenes/game_object/creature/creature.gd" id="1_p81dv"]
-[ext_resource type="Resource" uid="uid://b54klhue3xt0k" path="res://resources/creatures/basic_soldier.tres" id="2_wmhh1"]
+[ext_resource type="Resource" uid="uid://c654u1704cbix" path="res://resources/creatures/virus.tres" id="2_3a2b3"]
 [ext_resource type="Texture2D" uid="uid://c2hpbff8i1ktn" path="res://assets/sprites/character/Skeleton Attack.png" id="3_fff3k"]
 [ext_resource type="Texture2D" uid="uid://bq3jdqt4w7uyg" path="res://assets/sprites/character/Skeleton Idle.png" id="4_gfpd2"]
 [ext_resource type="Texture2D" uid="uid://dktatbvuv5a51" path="res://assets/sprites/character/Skeleton Walk.png" id="5_fus87"]
@@ -45,38 +45,6 @@ region = Rect2(344, 0, 43, 37)
 [sub_resource type="AtlasTexture" id="AtlasTexture_iayl3"]
 atlas = ExtResource("3_fff3k")
 region = Rect2(387, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_08g73"]
-atlas = ExtResource("3_fff3k")
-region = Rect2(430, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ks20o"]
-atlas = ExtResource("3_fff3k")
-region = Rect2(473, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kjmon"]
-atlas = ExtResource("3_fff3k")
-region = Rect2(516, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qkgno"]
-atlas = ExtResource("3_fff3k")
-region = Rect2(559, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3cboy"]
-atlas = ExtResource("3_fff3k")
-region = Rect2(602, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_swp4e"]
-atlas = ExtResource("3_fff3k")
-region = Rect2(645, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgmd7"]
-atlas = ExtResource("3_fff3k")
-region = Rect2(688, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jyexn"]
-atlas = ExtResource("3_fff3k")
-region = Rect2(731, 0, 43, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ikt4d"]
 atlas = ExtResource("4_gfpd2")
@@ -206,30 +174,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iayl3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_08g73")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ks20o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kjmon")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qkgno")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3cboy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_swp4e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vgmd7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jyexn")
 }],
 "loop": false,
 "name": &"attack",
@@ -328,7 +272,7 @@ radius = 23.5651
 scale = Vector2(2, 2)
 script = ExtResource("1_p81dv")
 animated_sprite_2d = NodePath("AnimatedSprite2D")
-creature = ExtResource("2_wmhh1")
+creature = ExtResource("2_3a2b3")
 range_area_2d = NodePath("RangeArea2D")
 attack_timer = NodePath("Timer")
 hp_bar = NodePath("ProgressBar")
@@ -336,7 +280,7 @@ hp_bar = NodePath("ProgressBar")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -17)
 sprite_frames = SubResource("SpriteFrames_ttlbk")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -355,10 +299,10 @@ shape = SubResource("CircleShape2D_7p5ka")
 one_shot = true
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -16.5
-offset_top = -44.0
-offset_right = 14.5
-offset_bottom = -34.0
+offset_left = -15.5
+offset_top = -43.0
+offset_right = 15.5
+offset_bottom = -39.0
 max_value = 1.0
 value = 1.0
 show_percentage = false

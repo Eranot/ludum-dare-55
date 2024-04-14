@@ -2,13 +2,15 @@ class_name CreatureSpawner
 extends Node2D
 
 @export var is_player: bool = true
-
 @onready var area_2d: Area2D = $Area2D
 
 
 func _ready():
 	area_2d.body_entered.connect(on_body_entered)
 	area_2d.body_exited.connect(on_body_entered)
+	
+	if is_player:
+		area_2d.collision_mask = 0x0001
 
 
 func spawn(creature: Creature):
@@ -21,5 +23,6 @@ func spawn(creature: Creature):
 func on_body_entered(body):
 	if not is_player:
 		return
+	
 	GameEvent.emit_spawn_enabled(not area_2d.has_overlapping_bodies())
 

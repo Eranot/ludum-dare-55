@@ -6,8 +6,8 @@
 
 [node name="SpellGrid" type="PanelContainer"]
 custom_minimum_size = Vector2(200, 200)
-offset_right = 200.0
-offset_bottom = 200.0
+offset_right = 245.0
+offset_bottom = 255.0
 script = ExtResource("1_kvyqq")
 creatures = Array[Resource("res://resources/script/creature.gd")]([ExtResource("2_aqsn2"), ExtResource("3_5dg22")])
 

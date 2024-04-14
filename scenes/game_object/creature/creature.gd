@@ -9,17 +9,17 @@ extends CharacterBody2D
 @export var attack_timer: Timer
 @export var hp_bar: ProgressBar
 
-var current_target: CreatureBody
+var current_target
 
 func _ready():
 	if is_player:
-		collision_layer = 0x01
-		collision_mask = 0x11
-		range_area_2d.collision_mask = 0x10
+		collision_layer = 0x0001
+		collision_mask = 0x1011
+		range_area_2d.collision_mask = 0x1010
 	else:
-		collision_layer = 0x10
-		collision_mask = 0x11
-		range_area_2d.collision_mask = 0x01
+		collision_layer = 0x0010
+		collision_mask = 0x0111
+		range_area_2d.collision_mask = 0x0101
 	
 	range_area_2d.body_entered.connect(on_enemy_entered)
 	attack_timer.timeout.connect(on_attack_timer)
@@ -29,7 +29,7 @@ func _ready():
 func _physics_process(delta):
 	var direction = 1 if is_player else -1
 	if direction:
-		velocity.x = direction * creature.speed
+		velocity.x = direction * creature.speed * 8
 	else:
 		velocity.x = move_toward(velocity.x, 0, creature.speed)
 	
@@ -48,7 +48,7 @@ func _physics_process(delta):
 
 
 func on_enemy_entered(body):
-	if body is CreatureBody:
+	if body is CreatureBody or body is Base:
 		start_attacking_first_enemy()
 
 

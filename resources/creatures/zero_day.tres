@@ -6,10 +6,11 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("2_jyjhr")
-design = "F F"
+design = "B R
+B G"
 icon = ExtResource("1_70nnu")
 game_object = "res://scenes/game_object/creature/zero_day/zero_day.tscn"
-speed = 30
+speed = 3
 attack = 3
 hp = 5
 attack_cooldown = 2.0

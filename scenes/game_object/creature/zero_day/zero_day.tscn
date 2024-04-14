@@ -1,7 +1,7 @@
-[gd_scene load_steps=51 format=3 uid="uid://dhifygh4a28da"]
+[gd_scene load_steps=43 format=3 uid="uid://dhifygh4a28da"]
 
 [ext_resource type="Script" path="res://scenes/game_object/creature/creature.gd" id="1_t5nu0"]
-[ext_resource type="Resource" uid="uid://b54klhue3xt0k" path="res://resources/creatures/basic_soldier.tres" id="2_7kccw"]
+[ext_resource type="Resource" uid="uid://nvm6ro7ltnl" path="res://resources/creatures/zero_day.tres" id="2_d6rit"]
 [ext_resource type="Texture2D" uid="uid://c2hpbff8i1ktn" path="res://assets/sprites/character/Skeleton Attack.png" id="3_tjr30"]
 [ext_resource type="Texture2D" uid="uid://bq3jdqt4w7uyg" path="res://assets/sprites/character/Skeleton Idle.png" id="4_cfb14"]
 [ext_resource type="Texture2D" uid="uid://dktatbvuv5a51" path="res://assets/sprites/character/Skeleton Walk.png" id="5_j2x58"]
@@ -45,38 +45,6 @@ region = Rect2(344, 0, 43, 37)
 [sub_resource type="AtlasTexture" id="AtlasTexture_iayl3"]
 atlas = ExtResource("3_tjr30")
 region = Rect2(387, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_08g73"]
-atlas = ExtResource("3_tjr30")
-region = Rect2(430, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ks20o"]
-atlas = ExtResource("3_tjr30")
-region = Rect2(473, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kjmon"]
-atlas = ExtResource("3_tjr30")
-region = Rect2(516, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qkgno"]
-atlas = ExtResource("3_tjr30")
-region = Rect2(559, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3cboy"]
-atlas = ExtResource("3_tjr30")
-region = Rect2(602, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_swp4e"]
-atlas = ExtResource("3_tjr30")
-region = Rect2(645, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgmd7"]
-atlas = ExtResource("3_tjr30")
-region = Rect2(688, 0, 43, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jyexn"]
-atlas = ExtResource("3_tjr30")
-region = Rect2(731, 0, 43, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ikt4d"]
 atlas = ExtResource("4_cfb14")
@@ -206,30 +174,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iayl3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_08g73")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ks20o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kjmon")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qkgno")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3cboy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_swp4e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vgmd7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jyexn")
 }],
 "loop": false,
 "name": &"attack",
@@ -329,7 +273,7 @@ radius = 32.0244
 scale = Vector2(2, 2)
 script = ExtResource("1_t5nu0")
 animated_sprite_2d = NodePath("AnimatedSprite2D")
-creature = ExtResource("2_7kccw")
+creature = ExtResource("2_d6rit")
 range_area_2d = NodePath("RangeArea2D")
 attack_timer = NodePath("Timer")
 hp_bar = NodePath("ProgressBar")
@@ -339,7 +283,7 @@ modulate = Color(0.921569, 0.0470588, 0.309804, 1)
 position = Vector2(0.5, -21)
 scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_ttlbk")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

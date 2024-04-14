@@ -29,20 +29,18 @@ func set_element(e: Enums.Element):
 
 
 func update_element():
-	element = randi_range(1, 4) as Enums.Element
+	element = randi_range(1, 3) as Enums.Element
 	update_icon()
 
 
 func update_icon():
 	match(element):
-		Enums.Element.FIRE:
+		Enums.Element.RED:
 			texture_rect.texture = preload("res://assets/sprites/ui/element/fire.png")
-		Enums.Element.WATER:
-			texture_rect.texture = preload("res://assets/sprites/ui/element/water.png")
-		Enums.Element.WIND:
-			texture_rect.texture = preload("res://assets/sprites/ui/element/wind.png")
-		Enums.Element.EARTH:
+		Enums.Element.GREEN:
 			texture_rect.texture = preload("res://assets/sprites/ui/element/earth.png")
+		Enums.Element.BLUE:
+			texture_rect.texture = preload("res://assets/sprites/ui/element/water.png")
 
 
 func select():

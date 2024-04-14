@@ -18,14 +18,12 @@ func get_design() -> Array[Array]:
 		
 		for e in line.split(" "):
 			match(e):
-				"F":
-					l.append(Enums.Element.FIRE)
-				"W":
-					l.append(Enums.Element.WATER)
-				"E":
-					l.append(Enums.Element.EARTH)
-				"I":
-					l.append(Enums.Element.WIND)
+				"R":
+					l.append(Enums.Element.RED)
+				"G":
+					l.append(Enums.Element.GREEN)
+				"B":
+					l.append(Enums.Element.BLUE)
 		d.append(l)
 	return d
 	

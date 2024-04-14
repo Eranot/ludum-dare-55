@@ -1,7 +1,8 @@
 extends AiStrategy
 
 var creatures_available: Array[Creature] = [
-	load("res://resources/creatures/basic_soldier.tres")
+	load("res://resources/creatures/virus.tres"),
+	load("res://resources/creatures/zero_day.tres")
 ]
 
 var creature_spawner: CreatureSpawner

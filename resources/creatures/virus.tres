@@ -6,10 +6,10 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("2_vpwca")
-design = "E E"
+design = "G G"
 icon = ExtResource("1_v6a32")
 game_object = "res://scenes/game_object/creature/virus/virus.tscn"
-speed = 60
+speed = 5
 attack = 1
 hp = 3
 attack_cooldown = 1.0
