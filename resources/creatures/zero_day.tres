@@ -1,17 +1,17 @@
 [gd_resource type="Resource" script_class="Creature" load_steps=3 format=3 uid="uid://nvm6ro7ltnl"]
 
-[ext_resource type="Texture2D" uid="uid://br70mt5noxyox" path="res://assets/sprites/ui/creature/zero_day.png" id="1_70nnu"]
+[ext_resource type="Texture2D" uid="uid://nfpmth00oo8o" path="res://assets/sprites/ui/element/zeroday_element.png" id="1_a1edy"]
 [ext_resource type="Script" path="res://resources/script/creature.gd" id="2_jyjhr"]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource("2_jyjhr")
-design = "B R
-B G"
-icon = ExtResource("1_70nnu")
+design = "B B
+R G"
+icon = ExtResource("1_a1edy")
 game_object = "res://scenes/game_object/creature/zero_day/zero_day.tscn"
 speed = 3
-attack = 3
-hp = 5
-attack_cooldown = 2.0
-ai_credits = 10
+attack = 4
+hp = 10
+attack_cooldown = 3.0
+ai_credits = 15
