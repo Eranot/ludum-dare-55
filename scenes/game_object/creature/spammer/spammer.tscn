@@ -128,6 +128,7 @@ size = Vector2(22.5, 37)
 size = Vector2(160, 63)
 
 [node name="Spammer" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite_2d", "range_area_2d", "attack_timer", "hp_bar", "center")]
+z_index = 1
 scale = Vector2(2, 2)
 script = ExtResource("1_01ln6")
 animated_sprite_2d = NodePath("AnimatedSprite2D")

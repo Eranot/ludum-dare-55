@@ -2,5 +2,5 @@ class_name AiStrategy
 extends Resource
 
 
-func play(credits: int):
+func play(_credits: int):
 	pass
