@@ -47,11 +47,11 @@ text = "reset grid"
 
 [node name="CreatureSpawnerPlayer" parent="." instance=ExtResource("4_ly5ex")]
 unique_name_in_owner = true
-position = Vector2(41, 317)
+position = Vector2(41, 332)
 
 [node name="CreatureSpawnerEnemy" parent="." instance=ExtResource("4_ly5ex")]
 unique_name_in_owner = true
-position = Vector2(1236, 317)
+position = Vector2(1236, 332)
 is_player = false
 
 [node name="AiPlayTimer" type="Timer" parent="."]
@@ -61,10 +61,10 @@ wait_time = 20.0
 one_shot = true
 
 [node name="BasePlayer" parent="." instance=ExtResource("5_iuv7b")]
-position = Vector2(115, 317)
+position = Vector2(115, 332)
 
 [node name="BaseEnemy" parent="." instance=ExtResource("5_iuv7b")]
-position = Vector2(1161, 317)
+position = Vector2(1161, 332)
 is_player = false
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("6_0frht")]

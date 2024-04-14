@@ -43,13 +43,13 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-	if animated_sprite_2d.animation == "attack" and animated_sprite_2d.is_playing():
+	if animated_sprite_2d.animation == "attack" + ("_enemy" if not is_player else "") and animated_sprite_2d.is_playing():
 		return
 	
 	if velocity:
-		animated_sprite_2d.play("walk")
+		animated_sprite_2d.play("walk" + ("_enemy" if not is_player else ""))
 	else:
-		animated_sprite_2d.play("idle")
+		animated_sprite_2d.play("idle" + ("_enemy" if not is_player else ""))
 
 
 func on_enemy_entered(body):
@@ -87,7 +87,7 @@ func attack():
 		return
 	
 	on_start_attack()
-	animated_sprite_2d.play("attack")
+	animated_sprite_2d.play("attack" + ("_enemy" if not is_player else ""))
 	await animated_sprite_2d.animation_finished
 	if is_instance_valid(current_target) and await current_target.damage(get_attack()):
 		current_target = null
