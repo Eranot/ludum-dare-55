@@ -4,6 +4,8 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	%RecursivoScreen.modulate = Color.hex(0xffffff00)
+	
 	await get_tree().create_timer(1).timeout
 	get_tree().create_tween().tween_property(%RecursivoScreen, "modulate", Color.hex(0xffffffff), 1)
 	await get_tree().create_timer(2).timeout

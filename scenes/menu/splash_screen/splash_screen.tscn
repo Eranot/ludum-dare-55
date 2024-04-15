@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://8mi5vocybb2m"]
+[gd_scene load_steps=6 format=3 uid="uid://8mi5vocybb2m"]
 
 [ext_resource type="Theme" uid="uid://dijqjy6cqknsb" path="res://resources/themes/ui_theme.tres" id="1_2fds8"]
 [ext_resource type="Script" path="res://scenes/menu/splash_screen/splash_screen.gd" id="2_vgyjn"]
 [ext_resource type="Texture2D" uid="uid://byueu5sed2vdn" path="res://assets/sprites/ui/logo-godot.png" id="3_c4ds0"]
 [ext_resource type="Texture2D" uid="uid://cfkncbwvtyb6q" path="res://assets/sprites/ui/logo-estudio-recursivo.png" id="4_gjck5"]
+[ext_resource type="Texture2D" uid="uid://c31qqcxpon3i3" path="res://assets/sprites/ui/Kazzter_Logo.png" id="5_r446v"]
 
 [node name="SplashScreen" type="ColorRect"]
 anchors_preset = 15
@@ -42,7 +43,6 @@ stretch_mode = 5
 
 [node name="RecursivoScreen" type="ColorRect" parent="."]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -60,14 +60,21 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBox" type="VBoxContainer" parent="RecursivoScreen/MarginContainer"]
+[node name="VBox" type="HBoxContainer" parent="RecursivoScreen/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 49
 alignment = 1
 
 [node name="Logo" type="TextureRect" parent="RecursivoScreen/MarginContainer/VBox"]
-custom_minimum_size = Vector2(0, 200)
+custom_minimum_size = Vector2(409, 200)
 layout_mode = 2
 texture = ExtResource("4_gjck5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Logo2" type="TextureRect" parent="RecursivoScreen/MarginContainer/VBox"]
+custom_minimum_size = Vector2(484, 200)
+layout_mode = 2
+texture = ExtResource("5_r446v")
 expand_mode = 1
 stretch_mode = 5
