@@ -11,8 +11,8 @@ R
 G"
 icon = ExtResource("1_kc7j0")
 game_object = "res://scenes/game_object/creature/spammer/spammer.tscn"
-speed = 10
+speed = 4
 attack = 1
-hp = 1
-attack_cooldown = 0.5
+hp = 2
+attack_cooldown = 0.7
 ai_credits = 10
