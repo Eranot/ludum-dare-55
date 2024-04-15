@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dijqjy6cqknsb" path="res://resources/themes/ui_theme.tres" id="1_rlbgw"]
 [ext_resource type="Script" path="res://scenes/menu/main_menu/main_menu.gd" id="2_2sew7"]
-[ext_resource type="Texture2D" uid="uid://dssyq1e67vbei" path="res://assets/sprites/ui/menu-background.png" id="3_70o2q"]
+[ext_resource type="Texture2D" uid="uid://bmkfamfjmrqus" path="res://assets/sprites/ui/background.png" id="3_gr5w8"]
 [ext_resource type="PackedScene" uid="uid://dx3j6taat0hti" path="res://scenes/ui/primary_button/primary_button.tscn" id="4_7pu57"]
 [ext_resource type="Texture2D" uid="uid://5gcwcseqimmr" path="res://assets/sprites/ui/Title.png" id="4_hix2x"]
 
@@ -27,7 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_70o2q")
+texture = ExtResource("3_gr5w8")
 stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
