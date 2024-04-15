@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/menu/main_menu/main_menu.gd" id="2_2sew7"]
 [ext_resource type="Texture2D" uid="uid://dssyq1e67vbei" path="res://assets/sprites/ui/menu-background.png" id="3_70o2q"]
 [ext_resource type="PackedScene" uid="uid://dx3j6taat0hti" path="res://scenes/ui/primary_button/primary_button.tscn" id="4_7pu57"]
-[ext_resource type="Texture2D" uid="uid://qw44hxolw61n" path="res://assets/sprites/ui/game-logo.png" id="5_b0uab"]
+[ext_resource type="Texture2D" uid="uid://5gcwcseqimmr" path="res://assets/sprites/ui/Title.png" id="4_hix2x"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -55,9 +55,14 @@ layout_mode = 2
 [node name="Logo" type="TextureRect" parent="MarginContainer/ButtonsContainer"]
 custom_minimum_size = Vector2(166, 145)
 layout_mode = 2
-texture = ExtResource("5_b0uab")
+texture = ExtResource("4_hix2x")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Spacer" type="MarginContainer" parent="MarginContainer/ButtonsContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_bottom = 0
 
 [node name="PlayButton" parent="MarginContainer/ButtonsContainer" instance=ExtResource("4_7pu57")]
 layout_mode = 2

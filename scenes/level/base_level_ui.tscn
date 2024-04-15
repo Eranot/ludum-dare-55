@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcwaonilgh7gl"]
+[gd_scene load_steps=5 format=3 uid="uid://bcwaonilgh7gl"]
 
 [ext_resource type="Theme" uid="uid://dijqjy6cqknsb" path="res://resources/themes/ui_theme.tres" id="2_5nbc3"]
 [ext_resource type="Script" path="res://scenes/level/base_level_ui.gd" id="2_cdcrm"]
 [ext_resource type="PackedScene" uid="uid://dx3j6taat0hti" path="res://scenes/ui/primary_button/primary_button.tscn" id="2_ggf5y"]
+[ext_resource type="Texture2D" uid="uid://l7bci3ad30rt" path="res://assets/sprites/ui/menu.png" id="4_dn28g"]
 
 [node name="BaseLevelUI" type="CanvasLayer"]
 script = ExtResource("2_cdcrm")
@@ -19,7 +20,14 @@ alignment = 2
 layout_mode = 2
 
 [node name="OptionsButton" parent="HBox/MarginContainer" instance=ExtResource("2_ggf5y")]
+visible = false
 layout_mode = 2
 text = "Options"
+
+[node name="MenuButton" type="TextureButton" parent="HBox/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_dn28g")
+texture_pressed = ExtResource("4_dn28g")
+texture_hover = ExtResource("4_dn28g")
 
 [connection signal="pressed" from="HBox/MarginContainer/OptionsButton" to="." method="_on_options_button_pressed"]

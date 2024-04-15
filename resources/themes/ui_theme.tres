@@ -1,8 +1,9 @@
-[gd_resource type="Theme" load_steps=18 format=3 uid="uid://dijqjy6cqknsb"]
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://dijqjy6cqknsb"]
 
 [ext_resource type="FontFile" uid="uid://dp7grgyaktl78" path="res://assets/fonts/visitor.ttf" id="1_f4oi8"]
 [ext_resource type="Texture2D" uid="uid://clpagpr53vgjg" path="res://assets/sprites/ui/button-normal.png" id="2_qlmj3"]
 [ext_resource type="Texture2D" uid="uid://cii3x3ltxc8h8" path="res://assets/sprites/ui/button-pressed.png" id="3_3sk0c"]
+[ext_resource type="Texture2D" uid="uid://b72n6n6x6pbxa" path="res://assets/sprites/ui/buttons.png" id="4_lxx25"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4h2v6"]
 texture = ExtResource("2_qlmj3")
@@ -48,40 +49,46 @@ bg_color = Color(0.419608, 0.313726, 0.321569, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h77pi"]
 bg_color = Color(0.313726, 0.615686, 0.941176, 1)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j1s7g"]
-load_path = "res://.godot/imported/button-normal.png-0b5e96e4c34f47406b6ae370d4adc92f.ctex"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ys8sy"]
+load_path = "res://.godot/imported/buttons.png-45495322fde9ea28edd97a2a97215465.ctex"
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xj8ys"]
-texture = SubResource("CompressedTexture2D_j1s7g")
-texture_margin_left = 27.0
-texture_margin_top = 6.0
-texture_margin_right = 26.0
-texture_margin_bottom = 9.0
-region_rect = Rect2(0, 0, 33, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_db6cg"]
+atlas = SubResource("CompressedTexture2D_ys8sy")
+region = Rect2(20, 17, 116, 40)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iwso2"]
-content_margin_left = 26.0
-content_margin_top = 10.0
-content_margin_right = 26.0
-content_margin_bottom = 12.0
-texture = SubResource("CompressedTexture2D_j1s7g")
-texture_margin_left = 27.0
-texture_margin_top = 6.0
-texture_margin_right = 27.0
-texture_margin_bottom = 9.0
-region_rect = Rect2(0, 0, 33, 30)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_po1c4"]
+texture = SubResource("AtlasTexture_db6cg")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+modulate_color = Color(1.5, 1.5, 1.5, 1)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5wmf7"]
-load_path = "res://.godot/imported/button-pressed.png-d84f16bd450439e1c1139d5e063ccb94.ctex"
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2qvg"]
+atlas = ExtResource("4_lxx25")
+region = Rect2(20, 17, 116, 40)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y2orj"]
-content_margin_top = 9.0
-texture = SubResource("CompressedTexture2D_5wmf7")
-texture_margin_left = 27.0
-texture_margin_top = 9.0
-texture_margin_right = 27.0
-texture_margin_bottom = 6.0
-region_rect = Rect2(0, 0, 33, 30)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hol4e"]
+texture = SubResource("AtlasTexture_x2qvg")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vnwyw"]
+load_path = "res://.godot/imported/buttons.png-45495322fde9ea28edd97a2a97215465.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chsc4"]
+atlas = SubResource("CompressedTexture2D_vnwyw")
+region = Rect2(20, 17, 116, 40)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jbdc6"]
+texture = SubResource("AtlasTexture_chsc4")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+modulate_color = Color(0.8, 0.8, 0.8, 1)
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
@@ -105,6 +112,6 @@ MarginContainer/constants/margin_left = 16
 MarginContainer/constants/margin_right = 16
 MarginContainer/constants/margin_top = 16
 PrimaryButton/base_type = &"Button"
-PrimaryButton/styles/hover = SubResource("StyleBoxTexture_xj8ys")
-PrimaryButton/styles/normal = SubResource("StyleBoxTexture_iwso2")
-PrimaryButton/styles/pressed = SubResource("StyleBoxTexture_y2orj")
+PrimaryButton/styles/hover = SubResource("StyleBoxTexture_po1c4")
+PrimaryButton/styles/normal = SubResource("StyleBoxTexture_hol4e")
+PrimaryButton/styles/pressed = SubResource("StyleBoxTexture_jbdc6")
