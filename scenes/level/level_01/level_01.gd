@@ -50,8 +50,10 @@ func on_reset_grid_timer_timeout():
 
 
 func on_game_end(won: bool):
-	print("WON: ", won)
-	get_tree().paused = true
+	if(won):
+		%EndGameManager.set_win()
+	else:
+		%EndGameManager.set_lose()
 
 
 func on_reset_grid_button_pressed():

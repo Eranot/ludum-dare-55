@@ -173,6 +173,7 @@ size = Vector2(65, 65)
 [node name="ZeroDay" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite_2d", "range_area_2d", "attack_timer", "hp_bar", "center")]
 z_index = 1
 scale = Vector2(2, 2)
+motion_mode = 1
 script = ExtResource("1_xifji")
 animated_sprite_2d = NodePath("AnimatedSprite2D")
 creature = ExtResource("2_d6rit")

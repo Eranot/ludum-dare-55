@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://16liuvk7l2xo"]
+
+[ext_resource type="Theme" uid="uid://dijqjy6cqknsb" path="res://resources/themes/ui_theme.tres" id="1_1vt0i"]
+[ext_resource type="Script" path="res://scenes/game_object/end_game_manager/end_game_manager.gd" id="2_07urx"]
+[ext_resource type="PackedScene" uid="uid://dx3j6taat0hti" path="res://scenes/ui/primary_button/primary_button.tscn" id="2_18gwu"]
+
+[node name="EndGameManager" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1vt0i")
+script = ExtResource("2_07urx")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.5
+offset_top = -212.0
+offset_right = 190.5
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"MainPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TitleHBox" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/TitleHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 72
+text = "VICTORY"
+vertical_alignment = 1
+
+[node name="Spacer" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Body" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Description" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Body"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Congratulations! Let's try a harder AI =)"
+autowrap_mode = 2
+
+[node name="Spacer" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Body"]
+layout_mode = 2
+
+[node name="ButtonsHBox" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Body"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NextLevelButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Body/ButtonsHBox" instance=ExtResource("2_18gwu")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Next Level"
+
+[node name="TryAgainButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Body/ButtonsHBox" instance=ExtResource("2_18gwu")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Try again"
